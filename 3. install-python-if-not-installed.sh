@@ -1,7 +1,7 @@
 #! /bin/bash
+cd /opt/SW/Jenkins
 version=$(python -V 2>&1 | grep -Po '(?<=Python )(.+)')
-if [[ ! -z "$version" ]]
+if [[ -z "$version" ]]
 then
-    apt install python
-    echo $(python --version)
+    apt install python -y
 fi
